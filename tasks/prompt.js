@@ -42,7 +42,7 @@ module.exports = function (grunt) {
             /**
              * @param {Object} answers
              */
-            inquirer.prompt( questions, function( answers ) {
+            inquirer.prompt( questions ).then( function( answers ) {
                 var answerPairs = Object.entries(answers);
                 answerPairs.forEach(answerPair => {
                     var [configName, answer] = answerPair;
